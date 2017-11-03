@@ -95,6 +95,11 @@ class UserController extends BaseController
         return $this->view()->assign('codes', $codes)->display('user/invite.tpl');
     }
 
+    public function payment($request, $response, $args)
+    {
+        return $this->view()->display('user/payment.tpl');
+    }
+    
     public function doInvite($request, $response, $args)
     {
         $n = $request->getParam('num');

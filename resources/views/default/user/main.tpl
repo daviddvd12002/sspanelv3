@@ -131,7 +131,13 @@
                         <i class="fa fa-users"></i> <span>邀请好友</span>
                     </a>
                 </li>
-
+             
+                <li>
+                    <a href="/user/payment">
+                        <i class="fa fa-users"></i> <span>充值付款</span>
+                    </a>
+                </li>
+                
                 {if $user->isAdmin()}
                     <li>
                         <a href="/admin">

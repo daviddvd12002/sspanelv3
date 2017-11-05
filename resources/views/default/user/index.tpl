@@ -73,19 +73,19 @@
                     <div class="box-header">
                         <i class="fa fa-pencil"></i>
 
-                        <h3 class="box-title">Sign in to get traffic</h3>
+                        <h3 class="box-title">Check in to get traffic</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <p> Every {$config['checkinTime']}hours can sign in once.</p>
+                        <p> Every {$config['checkinTime']} hours can check-in once.</p>
 
-                        <p>Last sign-in time:<code>{$user->lastCheckInTime()}</code></p>
+                        <p>Last check-in time:<code>{$user->lastCheckInTime()}</code></p>
                         {if $user->isAbleToCheckin() }
                             <p id="checkin-btn">
-                                <button id="checkin" class="btn btn-success  btn-flat">Sign-in</button>
+                                <button id="checkin" class="btn btn-success  btn-flat">Check-in</button>
                             </p>
                         {else}
-                            <p><a class="btn btn-success btn-flat disabled" href="#">Can not sign in</a></p>
+                            <p><a class="btn btn-success btn-flat disabled" href="#">Can not check in</a></p>
                         {/if}
                         <p id="checkin-msg"></p>
                     </div>

@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            管理中心
+            Admin Control
             <small>Admin Control</small>
         </h1>
     </section>
@@ -20,7 +20,7 @@
                     <div class="inner">
                         <h3>{$sts->getTotalUser()}</h3>
 
-                        <p>总用户</p>
+                        <p>Total User</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person"></i>

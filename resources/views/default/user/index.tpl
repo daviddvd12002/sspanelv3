@@ -77,7 +77,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <p> Every{$config['checkinTime']}can sign in once.</p>
+                        <p> Every {$config['checkinTime']}hours can sign in once.</p>
 
                         <p>Last sign-in time:<code>{$user->lastCheckInTime()}</code></p>
                         {if $user->isAbleToCheckin() }
@@ -109,10 +109,6 @@
                             <dd>{$user->port}</dd>
                             <dt>Expire Time:</dt>
                             <dd>{$user->passwd}</dd>
-                            <dt>自定义加密方式</dt>
-                            <dd>{$user->method}</dd>
-                            <dt>Last Used Time:</dt>
-                            <dd>{$user->lastSsTime()}</dd>
                         </dl>
                     </div>
              

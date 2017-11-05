@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            节点列表
+            Node List
             <small>Node List</small>
         </h1>
     </section>
@@ -16,9 +16,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
-                    <h4>注意!</h4>
-                    <p>请勿在任何地方公开节点地址！</p>
-                    <p>流量比例为0.5即使用1000MB按照500MB流量记录记录结算.</p>
+                    <h4>How to use</h4>
+                    <p>--------- </p>
                     {$msg}
                 </div>
             </div>
@@ -54,6 +53,9 @@
                                                         class="pull-right badge bg-aqua">443</span></a></li>
                                         <li><a href="./node/{$node->id}">Method <span
                                                         class="pull-right badge bg-green">{if $node->custom_method == 1} {$user->method} {else} {$node->method} {/if}</span></a>
+                                        </li>
+                                        <li><a href="./node/{$node->id}">Password(public) <span
+                                                        class="pull-right badge bg-green">pubpassword</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Protocal: <span
                                                         class="pull-right badge bg-green">{$user->port}:{$user->passwd}</span></a>

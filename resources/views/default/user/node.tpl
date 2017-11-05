@@ -55,8 +55,8 @@
                                         <li><a href="./node/{$node->id}">加密方式 <span
                                                         class="pull-right badge bg-green">{if $node->custom_method == 1} {$user->method} {else} {$node->method} {/if}</span></a>
                                         </li>
-                                        <li><a href="./node/{$node->id}">负载: <span
-                                                        class="pull-right badge bg-green">{$node->getNodeLoad()}</span></a>
+                                        <li><a href="./node/{$node->id}">Obfuscation: <span
+                                                        class="pull-right badge bg-green">{"Protocol:". $node->id}</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -73,6 +73,9 @@
                                         </li>
                                         <li><a href="./node/{$node->id}">Uptime: <span
                                                         class="pull-right badge bg-green">{$node->getNodeUptime()}</span></a>
+                                        </li>
+                                        <li><a href="./node/{$node->id}">负载: <span
+                                                        class="pull-right badge bg-green">{$node->getNodeLoad()}</span></a>
                                         </li>
                                     </ul>
                                 </div>

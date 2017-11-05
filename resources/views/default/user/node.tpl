@@ -56,10 +56,10 @@
                                                         class="pull-right badge bg-green">{if $node->custom_method == 1} {$user->method} {else} {$node->method} {/if}</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Protocal: <span
-                                                        class="pull-right badge bg-green">{$node->port}:{$user->passwd}</span></a>
+                                                        class="pull-right badge bg-green">{$user->port}:{$user->passwd}</span></a>
                                         </li>
                                          <li><a href="./node/{$node->id}">Obfuscation: <span
-                                                        class="pull-right badge bg-green">{$node->port}:{$user->passwd}</span></a>
+                                                        class="pull-right badge bg-green">tls1.2_ticket_auth</span></a>
                                         </li>
                                     </ul>
                                 </div>

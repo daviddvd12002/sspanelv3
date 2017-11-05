@@ -48,15 +48,18 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <ul class="nav nav-stacked">
-                                        <li><a href="./node/{$node->id}">节点地址 <span
+                                        <li><a href="./node/{$node->id}">Address <span
                                                         class="pull-right badge bg-blue">{$node->server}</span></a></li>
-                                        <li><a href="./node/{$node->id}">连接端口 <span
-                                                        class="pull-right badge bg-aqua">{$user->port}</span></a></li>
-                                        <li><a href="./node/{$node->id}">加密方式 <span
+                                        <li><a href="./node/{$node->id}">Port <span
+                                                        class="pull-right badge bg-aqua">443</span></a></li>
+                                        <li><a href="./node/{$node->id}">Method <span
                                                         class="pull-right badge bg-green">{if $node->custom_method == 1} {$user->method} {else} {$node->method} {/if}</span></a>
                                         </li>
-                                        <li><a href="./node/{$node->id}">Obfuscation: <span
-                                                        class="pull-right badge bg-green">{$node->id}</span></a>
+                                        <li><a href="./node/{$node->id}">Protocal: <span
+                                                        class="pull-right badge bg-green">{$node->port}:{$user->passwd}</span></a>
+                                        </li>
+                                         <li><a href="./node/{$node->id}">Obfuscation: <span
+                                                        class="pull-right badge bg-green">{$node->port}:{$user->passwd}</span></a>
                                         </li>
                                     </ul>
                                 </div>

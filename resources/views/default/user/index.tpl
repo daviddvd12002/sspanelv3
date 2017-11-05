@@ -105,13 +105,13 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <dl class="dl-horizontal">
-                            <dt>端口</dt>
+                            <dt>Account Level:</dt>
                             <dd>{$user->port}</dd>
-                            <dt>密码</dt>
+                            <dt>Expire Time:</dt>
                             <dd>{$user->passwd}</dd>
                             <dt>自定义加密方式</dt>
                             <dd>{$user->method}</dd>
-                            <dt>上次使用</dt>
+                            <dt>Last Used Time:</dt>
                             <dd>{$user->lastSsTime()}</dd>
                         </dl>
                     </div>

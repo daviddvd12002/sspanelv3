@@ -76,4 +76,11 @@ location / {
 
 view config guide on [wiki](https://github.com/orvice/ss-panel/wiki/v3-Config)
 
-# sspanelv3
+### 500的解决办法：
+主要有两种解决方案：
+
+直接注释掉fastcgi.conf文件中的fastcgi_param PHP_ADMIN_VALUE "open_basedir=$document_root/:/tmp/:/proc/";这一行，一棒子打死了目录访问安全策略
+
+在fastcgi.conf文件中，修改fastcgi_param PHP_ADMIN_VALUE "open_basedir=$document_root/:/tmp/:/proc/";，以test.com为例（此域名为添加vhost时输入的域名），修改内容如下：（这样做的坏处时每次添加vhost时都需要手动添加⊙﹏⊙）
+/usr/local/nginx/conf/fastcgi.conf
+fastcgi_param PHP_ADMIN_VALUE "open_basedir=/home/wwwroot/test.com/:/tmp/:/proc/";

@@ -62,10 +62,10 @@
                             </li>
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="/user/profile" class="btn btn-default btn-flat">个人信息</a>
+                                    <a href="/user/profile" class="btn btn-default btn-flat">User Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="/user/logout" class="btn btn-default btn-flat">退出</a>
+                                    <a href="/user/logout" class="btn btn-default btn-flat">Exit</a>
                                 </div>
                             </li>
                         </ul>
@@ -97,51 +97,45 @@
             <ul class="sidebar-menu">
                 <li>
                     <a href="/user">
-                        <i class="fa fa-dashboard"></i> <span>用户中心</span>
+                        <i class="fa fa-dashboard"></i> <span>User Center</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/user/node">
-                        <i class="fa fa-sitemap"></i> <span>节点列表</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/user/profile">
-                        <i class="fa fa-user"></i> <span>我的信息</span>
+                        <i class="fa fa-sitemap"></i> <span>Node List</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/user/trafficlog">
-                        <i class="fa fa-history"></i> <span>流量记录</span>
+                        <i class="fa fa-history"></i> <span>Traffic Log</span>
                     </a>
                 </li>
 
 
                 <li>
                     <a href="/user/edit">
-                        <i class="fa  fa-pencil"></i> <span>修改资料</span>
+                        <i class="fa  fa-pencil"></i> <span>Profile Edit</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="/user/invite">
-                        <i class="fa fa-users"></i> <span>邀请好友</span>
+                        <i class="fa fa-users"></i> <span>Invite</span>
                     </a>
                 </li>
              
                 <li>
                     <a href="/user/payment">
-                        <i class="fa fa-users"></i> <span>充值付款</span>
+                        <i class="fa fa-users"></i> <span>Payment</span>
                     </a>
                 </li>
                 
                 {if $user->isAdmin()}
                     <li>
                         <a href="/admin">
-                            <i class="fa fa-cog"></i> <span>管理面板</span>
+                            <i class="fa fa-cog"></i> <span>Admin Panel</span>
                         </a>
                     </li>
                 {/if}

@@ -78,7 +78,7 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" id="pwd-update" class="btn btn-primary">Confirm</button>
+                        <button type="submit" id="pwd-update" class="btn btn-primary">Submit</button>
                     </div>
 
                 </div>

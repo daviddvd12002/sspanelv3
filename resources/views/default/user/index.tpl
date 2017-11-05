@@ -94,7 +94,7 @@
                 <!-- /.box -->
             </div>
             <!-- /.col (right) -->
-<!--
+
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-header">
@@ -120,7 +120,7 @@
                 </div>
                 <!-- /.box -->
             </div>
-            <!-- /.col (right) --> -->
+            <!-- /.col (right) -->
         </div>
         <!-- /.row --><!-- END PROGRESS BARS -->
     </section>

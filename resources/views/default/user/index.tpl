@@ -58,6 +58,8 @@
                             <dd>{$user->usedTraffic()}</dd>
                             <dt>剩余流量</dt>
                             <dd>{$user->unusedTraffic()}</dd>
+                            <dt>上次使用</dt>
+                            <dd>{$user->lastSsTime()}</dd>
                         </dl>
                     </div>
                     <!-- /.box-body -->
@@ -101,7 +103,7 @@
                         <h3 class="box-title">连接信息</h3>
                     </div>
                     <!-- /.box-header -->
-                    <div class="box-body">
+ <!--                   <div class="box-body">
                         <dl class="dl-horizontal">
                             <dt>端口</dt>
                             <dd>{$user->port}</dd>
@@ -113,6 +115,7 @@
                             <dd>{$user->lastSsTime()}</dd>
                         </dl>
                     </div>
+             -->
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->

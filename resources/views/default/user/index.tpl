@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            用户中心
+            User Center
             <small>User Center</small>
         </h1>
     </section>
@@ -19,7 +19,7 @@
                     <div class="box-header">
                         <i class="fa fa-bullhorn"></i>
 
-                        <h3 class="box-title">公告&FAQ</h3>
+                        <h3 class="box-title">Announcement&FAQ</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -36,7 +36,7 @@
                     <div class="box-header">
                         <i class="fa fa-exchange"></i>
 
-                        <h3 class="box-title">流量使用情况</h3>
+                        <h3 class="box-title">Traffic Usage</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -52,13 +52,13 @@
                             </div>
                         </div>
                         <dl class="dl-horizontal">
-                            <dt>总流量</dt>
+                            <dt>Total Traffic</dt>
                             <dd>{$user->enableTraffic()}</dd>
-                            <dt>已用流量</dt>
+                            <dt>Used Traffic</dt>
                             <dd>{$user->usedTraffic()}</dd>
-                            <dt>剩余流量</dt>
+                            <dt>Remaining Traffic</dt>
                             <dd>{$user->unusedTraffic()}</dd>
-                            <dt>上次使用</dt>
+                            <dt>Last Used Time</dt>
                             <dd>{$user->lastSsTime()}</dd>
                         </dl>
                     </div>
@@ -73,19 +73,19 @@
                     <div class="box-header">
                         <i class="fa fa-pencil"></i>
 
-                        <h3 class="box-title">签到获取流量</h3>
+                        <h3 class="box-title">Sign in to get traffic</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <p> 每{$config['checkinTime']}小时可以签到一次。</p>
+                        <p> Every{$config['checkinTime']}can sign in once.</p>
 
-                        <p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
+                        <p>Last sign-in time:<code>{$user->lastCheckInTime()}</code></p>
                         {if $user->isAbleToCheckin() }
                             <p id="checkin-btn">
-                                <button id="checkin" class="btn btn-success  btn-flat">签到</button>
+                                <button id="checkin" class="btn btn-success  btn-flat">Sign-in</button>
                             </p>
                         {else}
-                            <p><a class="btn btn-success btn-flat disabled" href="#">不能签到</a></p>
+                            <p><a class="btn btn-success btn-flat disabled" href="#">Can not sign in</a></p>
                         {/if}
                         <p id="checkin-msg"></p>
                     </div>
@@ -100,7 +100,7 @@
                     <div class="box-header">
                         <i class="fa  fa-paper-plane"></i>
 
-                        <h3 class="box-title">连接信息</h3>
+                        <h3 class="box-title">Account Information</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -140,7 +140,7 @@
                     $("#checkin-btn").hide();
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("ERROR：" + jqXHR.status);
                 }
             })
         })

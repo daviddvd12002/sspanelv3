@@ -56,7 +56,7 @@
                                                         class="pull-right badge bg-green">{if $node->custom_method == 1} {$user->method} {else} {$node->method} {/if}</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Obfuscation: <span
-                                                        class="pull-right badge bg-green">{"Protocol:". $node->id}</span></a>
+                                                        class="pull-right badge bg-green">{$node->id}</span></a>
                                         </li>
                                     </ul>
                                 </div>

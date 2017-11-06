@@ -19,6 +19,7 @@
                 </div>
             </div>
             <div class="col-md-6">
+            <!--
                 <div class="box box-solid">
                     <div class="box-header">
                         <i class="fa fa-code"></i>
@@ -29,6 +30,7 @@
                     <div class="box-body">
                         <textarea class="form-control" rows="6">{$json_show}</textarea>
                     </div>
+             -->
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->

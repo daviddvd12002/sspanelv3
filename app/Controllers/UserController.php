@@ -65,6 +65,7 @@ class UserController extends BaseController
         if ($node->custom_method) {
             $ary['method'] = $this->user->method;
         }
+        $ary['obfs'] = $this->user->obfs;
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
         $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];

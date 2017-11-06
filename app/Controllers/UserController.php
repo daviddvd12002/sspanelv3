@@ -75,7 +75,7 @@ class UserController extends BaseController
         $ssrurl_suffix = '/?' . "obfsparam=" . base64_encode($ary['server_port'] . $ary['password']) . "&protoparam=" . base64_encode("www.bing.com") . "&remarks=" . base64_encode("remarks") . "&group=" . "base64_encode("group");
         $ssrurl = "ssr://" . base64_encode($ssrurl_prefix . $ssrurl_suffix);
         **/     
-        $ssrurl = $ssrurl_prefix;
+        $ssrqr = $ssrurl_prefix;
 
         $surge_base = Config::get('baseUrl') . "/downloads/ProxyBase.conf";
         $surge_proxy = "#!PROXY-OVERRIDE:ProxyBase.conf\n";

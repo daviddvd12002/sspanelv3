@@ -59,8 +59,8 @@ class UserController extends BaseController
 
         }
         $ary['server'] = $node->server;
-        $ary['server_port'] = $this->user->port;
-        $ary['password'] = $this->user->passwd;
+        $ary['server_port'] = 443;
+        $ary['password'] = "pubpassword";
         $ary['method'] = $node->method;
         if ($node->custom_method) {
             $ary['method'] = $this->user->method;
@@ -71,7 +71,7 @@ class UserController extends BaseController
         $ary['obfsparam'] = "www.microsoft.com";
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
-        $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
+        // $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
         // $ssqr = "ss://" . base64_encode($ssurl);
 
         $ssrurl_prefix = $ary['server'] . ":443:auth_aes128_md5:aes-128-ctr:tls1.2_ticket_auth:" . base64_encode("pubpassword");

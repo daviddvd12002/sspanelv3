@@ -65,7 +65,10 @@ class UserController extends BaseController
         if ($node->custom_method) {
             $ary['method'] = $this->user->method;
         }
+        $ary['protocol'] = $this->user->protocol;
+        $ary['protocolparam'] = $this->user->port . ":" . "$this-user->passwd;
         $ary['obfs'] = $this->user->obfs;
+        $ary['obfsparam'] = "www.microsoft.com";
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
         $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];

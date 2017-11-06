@@ -66,7 +66,7 @@ class UserController extends BaseController
             $ary['method'] = $this->user->method;
         }
         $ary['protocol'] = $this->user->protocol;
-        $ary['protocolparam'] = $this->user->port . ":" . "$this-user->passwd;
+        $ary['protocolparam'] = $this->user->port . ":" . "$this->user->passwd;
         $ary['obfs'] = $this->user->obfs;
         $ary['obfsparam'] = "www.microsoft.com";
         $json = json_encode($ary);

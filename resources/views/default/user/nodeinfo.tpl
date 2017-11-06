@@ -15,7 +15,7 @@
                 <div class="callout callout-warning">
                     <h4>注意!</h4>
 
-                    <p>配置文件以及二维码请勿泄露！</p>
+                    <p>配置文件以及二维码请勿泄露</p>
                 </div>
             </div>
             <div class="col-md-6">

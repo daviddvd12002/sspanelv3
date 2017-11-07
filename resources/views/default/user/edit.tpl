@@ -109,23 +109,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label">Encryption</label>
-
-                                <div class="col-sm-9">
-                                    <div class="input-group">
-                                        <select class="form-control" id="method">
-                                        {foreach $method as $cipher}
-                                           <option value="{$cipher}" {if $user->method==$cipher}selected="selected"{/if} >{$cipher}</option>  
-                                        {/foreach}
-                                        </select>  
-                                        <div class="input-group-btn">
-                                            <button type="submit" id="method-update" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                         <div class="box-footer"></div>
                     </div>

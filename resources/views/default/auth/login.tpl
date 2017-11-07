@@ -5,15 +5,15 @@
         <a href="#"><b>{$config['appName']}</b></a>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">登录到用户中心</p>
+        <p class="login-box-msg">Login</p>
 
         <form>
             <div class="form-group has-feedback">
-                <input id="email" name="Email" type="text" class="form-control" placeholder="邮箱"/>
+                <input id="email" name="Email" type="text" class="form-control" placeholder="E-mail"/>
                 <span  class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input id="passwd" name="Password" type="password" class="form-control" placeholder="密码"/>
+                <input id="passwd" name="Password" type="password" class="form-control" placeholder="Password"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
         </form>
@@ -21,26 +21,26 @@
             <div class="col-xs-8">
                 <div class="checkbox icheck">
                     <label>
-                        <input id="remember_me" value="week" type="checkbox"> 记住我
+                        <input id="remember_me" value="week" type="checkbox"> Remember me
                     </label>
                 </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-                <button id="login" type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+                <button id="login" type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
             </div><!-- /.col -->
         </div>
         <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
             <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-info"></i> 登录成功!</h4>
+            <h4><i class="icon fa fa-info"></i> Success!</h4>
             <p id="msg-success-p"></p>
         </div>
         <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
             <button type="button" class="close" id="error-close" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+            <h4><i class="icon fa fa-warning"></i> Error!</h4>
             <p id="msg-error-p"></p>
         </div>
-        <a href="/password/reset">忘记密码</a><br>
-        <a href="/auth/register" class="text-center">注册个帐号</a>
+        <a href="/password/reset">Forgot password</a><br>
+        <a href="/auth/register" class="text-center">Register</a>
 
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->
@@ -89,7 +89,7 @@
                 error:function(jqXHR){
                     $("#msg-error").hide(10);
                     $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误："+jqXHR.status);
+                    $("#msg-error-p").html("ERROR："+jqXHR.status);
                 }
             });
         }

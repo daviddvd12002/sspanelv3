@@ -36,7 +36,7 @@ class UserController extends BaseController
     {
         $msg = DbConfig::get('user-index');
         if ($msg == null) {
-            $msg = "鍦ㄥ悗鍙颁慨鏀圭敤鎴蜂腑蹇冨叕鍛�...";
+            $msg = "no message...";
         }
         return $this->view()->assign('msg', $msg)->display('user/index.tpl');
     }
@@ -133,18 +133,18 @@ class UserController extends BaseController
         $user = $this->user;
         if (!Hash::checkPassword($user->pass, $oldpwd)) {
             $res['ret'] = 0;
-            $res['msg'] = "鏃у瘑鐮侀敊璇�";
+            $res['msg'] = "Incorrect password";
             return $response->getBody()->write(json_encode($res));
         }
         if ($pwd != $repwd) {
             $res['ret'] = 0;
-            $res['msg'] = "涓ゆ杈撳叆涓嶇鍚�";
+            $res['msg'] = "Please reconfirm Password";
             return $response->getBody()->write(json_encode($res));
         }
 
         if (strlen($pwd) < 8) {
             $res['ret'] = 0;
-            $res['msg'] = "瀵嗙爜澶煭鍟�";
+            $res['msg'] = "Password too short";
             return $response->getBody()->write(json_encode($res));
         }
         $hashPwd = Hash::passwordHash($pwd);
@@ -185,7 +185,7 @@ class UserController extends BaseController
     public function doCheckIn($request, $response, $args)
     {
         if (!$this->user->isAbleToCheckin()) {
-            $res['msg'] = "鎮ㄤ技涔庡凡缁忕鍒拌繃浜�...";
+            $res['msg'] = "You already checked in...";
             $res['ret'] = 1;
             return $response->getBody()->write(json_encode($res));
         }
@@ -203,7 +203,7 @@ class UserController extends BaseController
             $log->save();
         } catch (\Exception $e) {
         }
-        $res['msg'] = sprintf("鑾峰緱浜� %u MB娴侀噺.", $traffic);
+        $res['msg'] = sprintf("Got %u MB traffic.", $traffic);
         $res['ret'] = 1;
         return $this->echoJson($response, $res);
     }
@@ -221,13 +221,13 @@ class UserController extends BaseController
         $res = array();
         if (!Hash::checkPassword($user->pass, $passwd)) {
             $res['ret'] = 0;
-            $res['msg'] = " 瀵嗙爜閿欒";
+            $res['msg'] = "Wrong password";
             return $this->echoJson($response, $res);
         }
         Auth::logout();
         $user->delete();
         $res['ret'] = 1;
-        $res['msg'] = "GG!鎮ㄧ殑甯愬彿宸茬粡浠庢垜浠殑绯荤粺涓垹闄�.";
+        $res['msg'] = "You accrount has been deleted.";
         return $this->echoJson($response, $res);
     }
 

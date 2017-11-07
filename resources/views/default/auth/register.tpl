@@ -6,65 +6,65 @@
     </div>
 
     <div class="register-box-body">
-        <p class="login-box-msg">注册，然后变成一只猫。</p>
+        <p class="login-box-msg">Register</p>
 
         <div class="form-group has-feedback">
-            <input type="text" id="name" class="form-control" placeholder="昵称"/>
+            <input type="text" id="name" class="form-control" placeholder="Name"/>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
 
         <div class="form-group has-feedback">
-            <input type="text" id="email" class="form-control" placeholder="邮箱"/>
+            <input type="text" id="email" class="form-control" placeholder="e-mail"/>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
 
         {if $requireEmailVerification}
             <div class="form-group">
                 <div class="input-group">
-                    <input type="text" id="verifycode" class="form-control" placeholder="邮箱验证码"/>
+                    <input type="text" id="verifycode" class="form-control" placeholder="Invitation code"/>
                 <span class="input-group-btn">
-                    <button type="button" id="sendcode" class="btn btn-default btn-flat">发送验证码</button>
+                    <button type="button" id="sendcode" class="btn btn-default btn-flat">Send invitation code</button>
                 </span>
                 </div>
             </div>
         {/if}
 
         <div class="form-group has-feedback">
-            <input type="password" id="passwd" class="form-control" placeholder="密码"/>
+            <input type="password" id="passwd" class="form-control" placeholder="Password"/>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
 
         <div class="form-group has-feedback">
-            <input type="password" id="repasswd" class="form-control" placeholder="重复密码"/>
+            <input type="password" id="repasswd" class="form-control" placeholder="Confirm password"/>
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
         </div>
 
         <div class="form-group has-feedback">
-            <input type="text" id="code" value="{$code}" class="form-control" placeholder="邀请码"/>
+            <input type="text" id="code" value="{$code}" class="form-control" placeholder="Invitation code"/>
             <span class="glyphicon glyphicon-send form-control-feedback"></span>
         </div>
 
         <div class="form-group has-feedback">
-            <p>注册即代表同意<a href="/tos">服务条款</a></p>
+            <p>You much agree <a href="/tos">TOS</a></p>
         </div>
 
         <div class="form-group has-feedback">
-            <button type="submit" id="reg" class="btn btn-primary btn-block btn-flat">同意服务条款并提交注册</button>
+            <button type="submit" id="reg" class="btn btn-primary btn-block btn-flat">Agress TOS and register</button>
         </div>
 
         <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
             <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-info"></i> 成功!</h4>
+            <h4><i class="icon fa fa-info"></i> Success!</h4>
             <p id="msg-success-p"></p>
         </div>
 
         <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
             <button type="button" class="close" id="error-close" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+            <h4><i class="icon fa fa-warning"></i> ERROR!</h4>
             <p id="msg-error-p"></p>
         </div>
 
-        <a href="/auth/login" class="text-center">已经注册？请登录</a>
+        <a href="/auth/login" class="text-center">Already registered? Login</a>
     </div><!-- /.form-box -->
 </div><!-- /.register-box -->
 
@@ -117,7 +117,7 @@
                 error: function (jqXHR) {
                     $("#msg-error").hide(10);
                     $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误：" + jqXHR.status);
+                    $("#msg-error-p").html("ERROR：" + jqXHR.status);
                 }
             });
         }
@@ -139,7 +139,7 @@
             if (!email) {
                 $("#msg-error").hide(10);
                 $("#msg-error").show(100);
-                $("#msg-error-p").html("请先填写邮箱!");
+                $("#msg-error-p").html("Please fill e-mail!");
                 return $("#email").focus();
             }
 
@@ -158,7 +158,7 @@
                         timer = setInterval(function () {
                             --countdown;
                             if (countdown) {
-                                $btn.text('重新发送 (' + countdown + '秒)');
+                                $btn.text('Resend (' + countdown + 's)');
                             } else {
                                 clearTimer();
                             }
@@ -173,14 +173,14 @@
                 error: function (jqXHR) {
                     $("#msg-error").hide(10);
                     $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误：" + jqXHR.status);
+                    $("#msg-error-p").html("ERROR：" + jqXHR.status);
                     clearTimer();
                 }
             });
-            $btn.addClass("disabled").prop("disabled", true).text('发送中...');
+            $btn.addClass("disabled").prop("disabled", true).text('Sending...');
             $("#verifycode").select();
             function clearTimer() {
-                $btn.text('重新发送').removeClass("disabled").prop("disabled", false);
+                $btn.text('Resend').removeClass("disabled").prop("disabled", false);
                 clearInterval(timer);
                 timer = null;
             }

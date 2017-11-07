@@ -66,16 +66,12 @@ class UserController extends BaseController
         $ary['protocolparam'] = $this->user->port . ":" . $this->user->passwd;
         $ary['obfs'] = $this->user->obfs;
         $ary['obfsparam'] = "bing.com";
-//        if ($node->custom_method) {
-//            $ary['method'] = $this->user->method;
-//        }
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
 
 //        $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
 //        $ssqr = "ss://" . base64_encode($ssurl);
-        $ssrurl_prefix = $ary['server'] . ":" . $ary['server_port'] . ":" . $ary['protocol'] . ":" . $ary['method'] . ":" . $ary['obfs'] . ":" . base64_encode($ary['password'];
-//        $ssrurl_prefix = $ary['server'] . ":443:auth_aes128_md5:aes-128-ctr:tls1.2_ticket_auth:" . base64_encode("pubpassword");
+        $ssrurl_prefix = $ary['server'] . ":" . $ary['server_port'] . ":" . $ary['protocol'] . ":" . $ary['method'] . ":" . $ary['obfs'] . ":" . base64_encode($ary['password']);
         $ssrurl_suffix = '/?' . "obfsparam=" . base64_encode($ary['obfsparam']) . "&protoparam=" . base64_encode($ary['protocolparam']) . "&remarks=" . base64_encode($ary['name']) . "&group=" . base64_encode("GoodByeFW");  
         $ssqr = "ssr://" . base64_encode($ssrurl_prefix . $ssrurl_suffix);
 

@@ -92,7 +92,11 @@ class UserController extends BaseController
     {
         return $this->view()->display('user/edit.tpl');
     }
-
+    
+    public function payment($request, $response, $args)
+    {
+        return $this->view()->display('user/payment.tpl');
+    }
 
     public function invite($request, $response, $args)
     {

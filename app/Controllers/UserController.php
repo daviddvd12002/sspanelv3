@@ -58,14 +58,14 @@ class UserController extends BaseController
         if ($node == null) {
 
         }
-        $ary['server'] = $node->name;
+        $ary['server'] = $node->server;
         $ary['server_port'] = "443";
         $ary['password'] = "pubpassword";
         $ary['method'] = $node->method;
-        $ary['protocal'] = $this->user->protocal;
-        $ary['protocalparam'] = $this->user->port . ":" . $this->user->passwd;
+        $ary['protocol'] = $this->user->protocol;
+        $ary['protocolparam'] = $this->user->port . ":" . $this->user->passwd;
         $ary['obfs'] = $this->user->obfs;
-        $ary['obfsparam'] = "bing";
+        $ary['obfsparam'] = "bing.com";
 //        if ($node->custom_method) {
 //            $ary['method'] = $this->user->method;
 //        }

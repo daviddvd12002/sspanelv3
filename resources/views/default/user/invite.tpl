@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            邀请
+            Invite
             <small>Invite</small>
         </h1>
     </section>
@@ -16,7 +16,7 @@
             <div class="col-sm-12">
                 <div id="msg-error" class="alert alert-warning alert-dismissable" style="display:none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <h4><i class="icon fa fa-warning"></i> ERROR!</h4>
 
                     <p id="msg-error-p"></p>
                 </div>
@@ -30,23 +30,23 @@
                     <div class="box-header">
                         <i class="fa fa-rocket"></i>
 
-                        <h3 class="box-title">邀请</h3>
+                        <h3 class="box-title">Invite</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <p>当前您可以生成<code>{$user->invite_num}</code>个邀请码。 </p>
+                        <p>You can generate <code>{$user->invite_num}</code> invitation code。 </p>
                         {if $user->invite_num }
                         <div class="input-group">
-                            <input class="form-control" id="num" type="number" placeholder="要生成的邀请码数量">
+                            <input class="form-control" id="num" type="number" placeholder="How many codes? ">
                             <div class="input-group-btn">
-                                <button id="invite" class="btn btn-info">生成我的邀请码</button>
+                                <button id="invite" class="btn btn-info">Generate my invitation code</button>
                             </div>
                         </div>
                         {/if}
                     </div>
                     <!-- /.box -->
                     <div class="box-header">
-                        <h3 class="box-title">我的邀请码</h3>
+                        <h3 class="box-title">My invitation code</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="table-responsive">
@@ -54,8 +54,8 @@
                             <thead>
                             <tr>
                                 <th>###</th>
-                                <th>邀请码(点右键复制链接)</th>
-                                <th>状态</th>
+                                <th>Invitation Code(Right click to copy link)</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -64,7 +64,7 @@
                                     <td><b>{$code->id}</b></td>
                                     <td><a href="/auth/register?code={$code->code}" target="_blank">{$code->code}</a>
                                     </td>
-                                    <td>可用</td>
+                                    <td>Available</td>
                                 </tr>
                             {/foreach}
                             </tbody>
@@ -112,7 +112,7 @@
                     window.location.reload();
                 },
                 error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
+                    alert("ERROR：" + jqXHR.status);
                 }
             })
         })

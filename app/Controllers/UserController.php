@@ -72,10 +72,10 @@ class UserController extends BaseController
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
 
-        $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
-        $ssqr = "ss://" . base64_encode($ssurl);
-
-        $ssrurl_prefix = $ary['server'] . ":443:auth_aes128_md5:aes-128-ctr:tls1.2_ticket_auth:" . base64_encode("pubpassword");
+//        $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
+//        $ssqr = "ss://" . base64_encode($ssurl);
+        $ssrurl_prefix = $ary['server'] . ":" . $ary['server_port'] . ":" . $ary['protocol'] . ":" . $ary['method'] . ":" $ary['obfs'] . base64_encode($ary['password'];
+//        $ssrurl_prefix = $ary['server'] . ":443:auth_aes128_md5:aes-128-ctr:tls1.2_ticket_auth:" . base64_encode("pubpassword");
         $ssrurl_suffix = '/?' . "obfsparam=" . base64_encode($ary['server_port'] . ":" . $ary['password']) . "&protoparam=" . base64_encode($ary['server_port'] . ":" . $ary['password']) . "&remarks=" . base64_encode($ary['server']) . "&group=" . base64_encode("GoodByeFW");  
         $ssqr = "ssr://" . base64_encode($ssrurl_prefix . $ssrurl_suffix);
 

@@ -3,7 +3,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            节点列表
+            Node List
             <small>Node List</small>
         </h1>
     </section>
@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
-                    <h4>注意!</h4>
+                    <h4>Warning!</h4>
 
-                    <p>配置文件以及二维码请勿泄露</p>
+                    <p>Do not disclose the configuration file and QR code</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -23,7 +23,7 @@
                     <div class="box-header">
                         <i class="fa fa-code"></i>
 
-                        <h3 class="box-title">配置Json</h3>
+                        <h3 class="box-title">SSR-Json</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -36,7 +36,7 @@
                     <div class="box-header">
                         <i class="fa fa-code"></i>
 
-                        <h3 class="box-title">配置地址</h3>
+                        <h3 class="box-title">SSR-Link</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -58,7 +58,7 @@
                     <div class="box-header">
                         <i class="fa fa-qrcode"></i>
 
-                        <h3 class="box-title">配置二维码</h3>
+                        <h3 class="box-title">SSR QR-code</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">

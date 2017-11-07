@@ -72,7 +72,7 @@ class UserController extends BaseController
 //        $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
 //        $ssqr = "ss://" . base64_encode($ssurl);
         $ssrurl_prefix = $ary['server'] . ":" . $ary['server_port'] . ":" . $ary['protocol'] . ":" . $ary['method'] . ":" . $ary['obfs'] . ":" . base64_encode($ary['password']);
-        $ssrurl_suffix = '/?' . "obfsparam=" . base64_encode($ary['obfsparam']) . "&protoparam=" . base64_encode($ary['protocolparam']) . "&remarks=" . base64_encode($ary['name']) . "&group=" . base64_encode("GoodByeFW");  
+        $ssrurl_suffix = '/?' . "obfsparam=" . base64_encode($ary['obfsparam']) . "&protoparam=" . base64_encode($ary['protocolparam']) . "&remarks=" . base64_encode($node->name) . "&group=" . base64_encode("GoodByeFW");  
         $ssqr = "ssr://" . base64_encode($ssrurl_prefix . $ssrurl_suffix);
 
 

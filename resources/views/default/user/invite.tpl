@@ -74,22 +74,14 @@
             </div>
 
             <div class="col-md-6">
-                <div class="callout callout-warning">
-                    <h4>注意！</h4>
-
-                    <p>邀请码请给认识的需要的人。</p>
-
-                    <p>邀请有记录，若被邀请的人违反用户协议，您将会有连带责任。</p>
-                </div>
 
                 <div class="callout callout-info">
-                    <h4>说明</h4>
+                    <h4>About</h4>
 
-                    <p>用户注册48小时后，才可以生成邀请码。</p>
+                    <p>You can generate invitation code 48 hours after registration. </p>
 
-                    <p>邀请码暂时无法购买，请珍惜。</p>
+                    <p>You can share invitation code to your friend. </p>
 
-                    <p>公共页面不定期发放邀请码，如果用完邀请码可以关注公共邀请。</p>
                 </div>
             </div>
             <!-- /.col (right) -->

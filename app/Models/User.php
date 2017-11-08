@@ -51,7 +51,7 @@ class User extends Model
     public function lastSsTime()
     {
         if ($this->attributes['t'] == 0) {
-            return "从未使用喵";
+            return "Never used";
         }
         return Tools::toDateTime($this->attributes['t']);
     }
@@ -59,7 +59,7 @@ class User extends Model
     public function lastCheckInTime()
     {
         if ($this->attributes['last_check_in_time'] == 0) {
-            return "从未签到";
+            return "Never check in";
         }
         return Tools::toDateTime($this->attributes['last_check_in_time']);
     }

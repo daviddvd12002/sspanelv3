@@ -106,9 +106,15 @@
                     <div class="box-body">
                         <dl class="dl-horizontal">
                             <dt>Account Level:</dt>
-                            <dd>{$user->port}</dd>
+                            <dd>{$user->plan}</dd>
                             <dt>Expire Time:</dt>
-                            <dd>{$user->passwd}</dd>
+                            <dd>{date("Y-m-d H:i:s", $user->expire_time)}</dd>
+                            <dt>Remaining time:</dt>
+                            {if (($user->expire_time - time()) <0)}
+				            <dd><font size="2" color="red">Subscription has expired！</font></dd>
+			                {else}
+				            <dd>{number_format(($user->expire_time - time())/86400 ,1)}Day(s)</dd>
+			    {/if}
                         </dl>
                     </div>
              

@@ -97,13 +97,13 @@
                     <div class="box-body">
                         <div class="form-horizontal">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Shadowsocks Password</label>
+                                <label class="col-sm-3 control-label">protocol parameter</label>
 
                                 <div class="col-sm-9">
                                     <div class="input-group">
-                                        <input type="text" id="sspwd" placeholder="Input New Password" class="form-control">
+                                        <input type="text" id="sspwd" placeholder="Input Your Private Password" class="form-control">
                                         <div class="input-group-btn">
-                                            <button type="submit" id="ss-pwd-update" class="btn btn-primary">Confirm</button>
+                                            <button type="submit" id="ss-pwd-update" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </div>

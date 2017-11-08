@@ -33,6 +33,8 @@ class XCat
                 return $this->resetTraffic();
             case("sendDiaryMail"):
                 return DailyMail::sendDailyMail();
+            case("checkExpireTime"):
+                return $this->checkExpireTime();
             default:
                 return $this->defaultAction();
         }

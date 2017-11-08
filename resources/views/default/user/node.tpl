@@ -16,8 +16,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
-                    <h4>How to use</h4>
-                    <p>--------- </p>
+                    <h4>Node List</h4>
+
                     {$msg}
                 </div>
             </div>

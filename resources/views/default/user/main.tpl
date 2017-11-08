@@ -57,7 +57,7 @@
 
                                 <p>
                                     {$user->email}
-                                    <small>加入时间：{$user->regDate()}</small>
+                                    <small>Register date：{$user->regDate()}</small>
                                 </p>
                             </li>
                             <li class="user-footer">
@@ -128,7 +128,7 @@
              
                 <li>
                     <a href="/user/payment">
-                        <i class="fa fa-users"></i> <span>Payment</span>
+                        <i class="fa fa-users"></i> <span>Subscription</span>
                     </a>
                 </li>
                 

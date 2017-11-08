@@ -106,12 +106,11 @@
                     <div class="box-body">
                         <dl class="dl-horizontal">
                             <dt>Account Level:</dt>
-			    {if ($user->plan == 'A')}
-				  <dd><font size="2" color="red">Free User</font></dd>
+			    {if ($user->plan == 'B')}
+			          <dd><font size="2" color="green">Advanced subscription</font>
 			    {else}
-				  <dd><font size="2" color="green">Advanced subscription</font></dd>
+				  <dd><font size="2" color="red">Free User</font></dd>
 			    {/if}
-                            <dd>{$user->plan}</dd>
                             <dt>Expire Time:</dt>
                             <dd>{date("Y-m-d H:i:s", $user->expire_time)}</dd>
                             <dt>Remaining time:</dt>

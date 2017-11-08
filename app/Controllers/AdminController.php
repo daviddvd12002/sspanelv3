@@ -53,7 +53,7 @@ class AdminController extends UserController
             $code->save();
         }
         $res['ret'] = 1;
-        $res['msg'] = "邀请码添加成功";
+        $res['msg'] = "Invitation code added successfully";
         return $response->getBody()->write(json_encode($res));
     }
 
@@ -129,7 +129,7 @@ class AdminController extends UserController
             DbConfig::set($key, $value);
         }
         $res['ret'] = 1;
-        $res['msg'] = "更新成功";
+        $res['msg'] = "Updated successful";
         return $response->getBody()->write(json_encode($res));
     }
     public function cleanNodelog($request, $response, $args)

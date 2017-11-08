@@ -2,27 +2,27 @@
 	<div class="container">
 		<div class="row">
 			<div class="col l6 s12">
-				<h5 class="white-text">关于</h5>
-				<p class="grey-text text-lighten-4">本站提供某种帐号用于科学上网.</p>
+				<h5 class="white-text">About</h5>
+				<p class="grey-text text-lighten-4">Help you through the company firewall.</p>
 
 
 			</div>
 			<div class="col l3 s12">
-				<h5 class="white-text">用户</h5>
+				<h5 class="white-text">User</h5>
 				<ul>
 				{if $user->isLogin}
-					<li><a class="white-text" href="/user">用户中心</a></li>
-					<li><a class="white-text" href="/user/logout">退出</a></li>
+					<li><a class="white-text" href="/user">User Center</a></li>
+					<li><a class="white-text" href="/user/logout">Exit</a></li>
 				{else}
-					<li><a class="white-text" href="/auth/login">登录</a></li>
-					<li><a class="white-text" href="/auth/register">注册</a></li>
+					<li><a class="white-text" href="/auth/login">Login</a></li>
+					<li><a class="white-text" href="/auth/register">Register</a></li>
 				{/if}
 				</ul>
 			</div>
 			<div class="col l3 s12">
-				<h5 class="white-text">页面</h5>
+				<h5 class="white-text">Page</h5>
 				<ul>
-					<li><a class="white-text" href="/code">邀请码</a></li>
+					<li><a class="white-text" href="/code">Invitation code</a></li>
 					<li><a class="white-text" href="/tos">TOS</a></li>
 				</ul>
 			</div>

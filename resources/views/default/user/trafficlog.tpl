@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            流量使用记录
+            Traffic Log
             <small>Traffic Log</small>
         </h1>
     </section>
@@ -15,8 +15,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
-                    <h4>注意!</h4>
-                    <p>部分节点不支持流量记录.</p>
+                    <h4>Traffic Log</h4>
+                    <p>Some nodes do not support traffic recording.</p>
                 </div>
             </div>
         </div>
@@ -24,9 +24,9 @@
             <div class="col-xs-12">
                 <div class="box form-inline">
                      <div class="form-group">
-                        <label for="labelNode">节点</label>
+                        <label for="labelNode">Node</label>
                         <select id="search-node">
-                            <option value="0">所有节点</option>
+                            <option value="0">All</option>
                         {foreach $nodes as $node}
                             <option value="{$node->id}" {if $node->id==$seleNode}selected="selected"{/if}>
                                 {$node->name}
@@ -34,7 +34,7 @@
                         {/foreach}
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="log-search">搜索</button>
+                    <button type="submit" class="btn btn-primary" id="log-search">Search</button>
                 </div>
                 <div class="box">
                     <div class="box-body table-responsive no-padding">
@@ -42,11 +42,11 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>ID</th>
-                                <th>使用节点</th>
-                                <th>倍率</th>
-                                <th>实际使用流量</th>
-                                <th>结算流量</th>
-                                <th>记录时间</th>
+                                <th>Node</th>
+                                <th>Magnification</th>
+                                <th>The actual use of traffic</th>
+                                <th>Recording traffic</th>
+                                <th>Record time</th>
                             </tr>
                             {foreach $logs as $log}
                                 <tr>

@@ -5,11 +5,11 @@
         <a href="#"><b>{$config['appName']}</b></a>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">重置密码</p>
+        <p class="login-box-msg">Reset password</p>
 
         <form>
             <div class="form-group has-feedback">
-                <input type="password" id="password" class="form-control" placeholder="在这里输入新密码"/>
+                <input type="password" id="password" class="form-control" placeholder="Input your new password"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
 
@@ -18,21 +18,21 @@
         <div class="row">
 
             <div class="col-xs-4">
-                <button id="reset" type="submit" class="btn btn-primary btn-block btn-flat">重置密码</button>
+                <button id="reset" type="submit" class="btn btn-primary btn-block btn-flat">Reset password</button>
             </div><!-- /.col -->
         </div>
         <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
             <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-info"></i> 成功!</h4>
+            <h4><i class="icon fa fa-info"></i> Success!</h4>
             <p id="msg-success-p"></p>
         </div>
         <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
             <button type="button" class="close" id="error-close" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+            <h4><i class="icon fa fa-warning"></i> Error!</h4>
             <p id="msg-error-p"></p>
         </div>
-        <a href="/auth/login">登陆</a><br>
-        <a href="/auth/register" class="text-center">注册个帐号</a>
+        <a href="/auth/login">Login</a><br>
+        <a href="/auth/register" class="text-center">Register</a>
 
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->
@@ -80,7 +80,7 @@
                 error:function(jqXHR){
                     $("#msg-error").hide(10);
                     $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误："+jqXHR.status);
+                    $("#msg-error-p").html("Error："+jqXHR.status);
                     // 在控制台输出错误信息
                     console.log(removeHTMLTag(jqXHR.responseText));
                 }

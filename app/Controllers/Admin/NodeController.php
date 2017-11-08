@@ -33,11 +33,11 @@ class NodeController extends AdminController
         $node->sort = $request->getParam('sort');
         if (!$node->save()) {
             $rs['ret'] = 0;
-            $rs['msg'] = "添加失败";
+            $rs['msg'] = "Fail";
             return $response->getBody()->write(json_encode($rs));
         }
         $rs['ret'] = 1;
-        $rs['msg'] = "节点添加成功";
+        $rs['msg'] = "Success";
         return $response->getBody()->write(json_encode($rs));
     }
 
@@ -68,11 +68,11 @@ class NodeController extends AdminController
         $node->sort = $request->getParam('sort');
         if (!$node->save()) {
             $rs['ret'] = 0;
-            $rs['msg'] = "修改失败";
+            $rs['msg'] = "fail to edit";
             return $response->getBody()->write(json_encode($rs));
         }
         $rs['ret'] = 1;
-        $rs['msg'] = "修改成功";
+        $rs['msg'] = "Successfully modified";
         return $response->getBody()->write(json_encode($rs));
     }
 
@@ -83,11 +83,11 @@ class NodeController extends AdminController
         $node = Node::find($id);
         if (!$node->delete()) {
             $rs['ret'] = 0;
-            $rs['msg'] = "删除失败";
+            $rs['msg'] = "failed to delete";
             return $response->getBody()->write(json_encode($rs));
         }
         $rs['ret'] = 1;
-        $rs['msg'] = "删除成功";
+        $rs['msg'] = "successfully deleted";
         return $response->getBody()->write(json_encode($rs));
     }
 

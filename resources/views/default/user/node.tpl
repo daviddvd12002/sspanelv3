@@ -58,28 +58,34 @@
                                                         class="pull-right badge bg-green">pubpassword</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Protocal: <span
+                                                        class="pull-right badge bg-green">{$user->protocol}</span></a>
+                                        </li>
+                                        <li><a href="./node/{$node->id}">Protocal parameter: <span
                                                         class="pull-right badge bg-green">{$user->port}:{$user->passwd}</span></a>
                                         </li>
                                          <li><a href="./node/{$node->id}">Obfuscation: <span
                                                         class="pull-right badge bg-green">tls1.2_ticket_auth</span></a>
                                         </li>
+                                        <li><a href="./node/{$node->id}">Obfuscation parameter: <span
+                                                        class="pull-right badge bg-green">[optional]</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="nav nav-stacked">
-                                        <li><a href="./node/{$node->id}">流量比例 <span
+                                        <li><a href="./node/{$node->id}">Ratio <span
                                                         class="pull-right badge bg-blue">{$node->traffic_rate}</span></a>
                                         </li>
-                                        <li><a href="./node/{$node->id}">在线人数 <span
+                                        <li><a href="./node/{$node->id}">online users <span
                                                         class="pull-right badge bg-aqua">{$node->getOnlineUserCount()}</span></a>
                                         </li>
-                                        <li><a href="./node/{$node->id}">产生流量 <span
+                                        <li><a href="./node/{$node->id}">Traffic <span
                                                         class="pull-right badge bg-green">{$node->getTrafficFromLogs()}</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Uptime: <span
                                                         class="pull-right badge bg-green">{$node->getNodeUptime()}</span></a>
                                         </li>
-                                        <li><a href="./node/{$node->id}">负载: <span
+                                        <li><a href="./node/{$node->id}">Loading: <span
                                                         class="pull-right badge bg-green">{$node->getNodeLoad()}</span></a>
                                         </li>
                                     </ul>

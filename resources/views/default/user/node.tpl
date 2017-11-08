@@ -48,9 +48,9 @@
                                 <div class="col-md-6">
                                     <ul class="nav nav-stacked">
                                         <li><a href="./node/{$node->id}">Address <span
-                                                        class="pull-right badge bg-blue">{$node->server}</span></a></li>
+                                                        class="pull-right badge bg-green">{$node->server}</span></a></li>
                                         <li><a href="./node/{$node->id}">Port <span
-                                                        class="pull-right badge bg-aqua">443</span></a></li>
+                                                        class="pull-right badge bg-green">443</span></a></li>
                                         <li><a href="./node/{$node->id}">Method <span
                                                         class="pull-right badge bg-green">{if $node->custom_method == 1} {$user->method} {else} {$node->method} {/if}</span></a>
                                         </li>
@@ -66,8 +66,8 @@
                                          <li><a href="./node/{$node->id}">Obfuscation: <span
                                                         class="pull-right badge bg-green">tls1.2_ticket_auth</span></a>
                                         </li>
-                                        <li><a href="./node/{$node->id}">Obfuscation parameter: <span
-                                                        class="pull-right badge bg-green">[optional]</span></a>
+                                        <li><a href="./node/{$node->id}">Obfuscation parameter (optional): <span
+                                                        class="pull-right badge bg-green">bing.com</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -77,16 +77,16 @@
                                                         class="pull-right badge bg-blue">{$node->traffic_rate}</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">online users <span
-                                                        class="pull-right badge bg-aqua">{$node->getOnlineUserCount()}</span></a>
+                                                        class="pull-right badge bg-blue">{$node->getOnlineUserCount()}</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Traffic <span
-                                                        class="pull-right badge bg-green">{$node->getTrafficFromLogs()}</span></a>
+                                                        class="pull-right badge bg-blue">{$node->getTrafficFromLogs()}</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Uptime: <span
-                                                        class="pull-right badge bg-green">{$node->getNodeUptime()}</span></a>
+                                                        class="pull-right badge bg-blue">{$node->getNodeUptime()}</span></a>
                                         </li>
                                         <li><a href="./node/{$node->id}">Loading: <span
-                                                        class="pull-right badge bg-green">{$node->getNodeLoad()}</span></a>
+                                                        class="pull-right badge bg-blue">{$node->getNodeLoad()}</span></a>
                                         </li>
                                     </ul>
                                 </div>

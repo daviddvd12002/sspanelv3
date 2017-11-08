@@ -73,12 +73,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="nav nav-stacked">
-                                        <li><a href="./node/{$node->id}">The following information does not need to be configured to the client software <span
-                                                        class="pull-right badge bg-blue"></span></a>
-                                        </li>
 
-                                        <li><a href="./node/{$node->id}">Ratio <span
-                                                        class="pull-right badge bg-blue">{$node->traffic_rate}</span></a>
+                                        <li>Ratio <span class="pull-right badge bg-blue">{$node->traffic_rate}</span>
                                         </li>
                                         <li><a href="./node/{$node->id}">online users <span
                                                         class="pull-right badge bg-blue">{$node->getOnlineUserCount()}</span></a>

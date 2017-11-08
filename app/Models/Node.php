@@ -28,7 +28,7 @@ class Node extends Model
     {
         $log = $this->getLastNodeInfoLog();
         if ($log == null) {
-            return "暂无数据";
+            return "No data";
         }
         return Tools::secondsToTime((int)$log->uptime);
     }
@@ -37,7 +37,7 @@ class Node extends Model
     {
         $log = $this->getLastNodeInfoLog();
         if ($log == null) {
-            return "暂无数据";
+            return "No data";
         }
         return $log->load;
     }
@@ -56,7 +56,7 @@ class Node extends Model
     {
         $log = $this->getLastNodeOnlineLog();
         if ($log == null) {
-            return "暂无数据";
+            return "No data";
         }
         return $log->online_user;
     }
@@ -66,7 +66,7 @@ class Node extends Model
         $id = $this->attributes['id'];
         $traffic = TrafficLog::where('node_id', $id)->sum('u') + TrafficLog::where('node_id', $id)->sum('d');
         if ($traffic == 0) {
-            return "暂无数据";
+            return "No data";
         }
         return Tools::flowAutoShow($traffic);
     }

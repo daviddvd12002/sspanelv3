@@ -101,4 +101,16 @@ class XCat
         }
         return "reset traffic successful";
     }
+    
+    public function checkExpireTime(){
+        try{
+            User::where('expire_time','<',time())->update([
+                'plan' => 'A',
+            ]);
+        }catch (\Exception $e){
+             echo $e->getMessage();
+             return false;
+        }
+        return "check expire time successful";
+    }
 }

@@ -156,7 +156,7 @@ class UserController extends BaseController
         $user->save();
 
         $res['ret'] = 1;
-        $res['msg'] = "ok";
+        $res['msg'] = "Success";
         return $this->echoJson($response, $res);
     }
 

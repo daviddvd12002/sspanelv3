@@ -36,10 +36,10 @@
                                     <div class="product-info">
                                         <a href="./node/{$node->id}" class="product-title">{$node->name} <span
                                                     class="label label-info pull-right">{$node->status}</span></a>
-                                        <span class=" badge bg-blue">[Ratio:&nbsp;{$node->traffic_rate}]</span>
-                                        <span class=" badge bg-blue">[online users:&nbsp;{$node->getOnlineUserCount()}]</span>
+                                        <span class=" badge bg-red">[Ratio:&nbsp;{$node->traffic_rate}]</span>
+                                        <span class=" badge bg-green">[online users:&nbsp;{$node->getOnlineUserCount()}]</span>
                                         <span class=" badge bg-blue">[Uptime:&nbsp;{$node->getNodeUptime()}]</span>
-                                        <span class=" badge bg-blue">[Loading:&nbsp;{$node->getNodeLoad()}]</span>
+                                        <span class=" badge bg-yellow">[Loading:&nbsp;{$node->getNodeLoad()}]</span>
                                         <p>
                                             {$node->info}
                                         </p>
@@ -80,9 +80,7 @@
                                         <li><a href="./node/{$node->id}">Protocal parameter: <span
                                                         class="pull-right badge bg-green">{$user->port}:{$user->passwd}</span></a>
                                         </li>
-                                        <li><a href="./node/{$node->id}">Uptime: <span
-                                                        class="pull-right badge bg-blue">{$node->getNodeUptime()}</span></a>
-                                        </li>
+
                                         <li><a href="./node/{$node->id}">Obfuscation parameter (optional): <span
                                                         class="pull-right badge bg-green">bing.com</span></a>
                                         </li>

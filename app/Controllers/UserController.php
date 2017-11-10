@@ -49,6 +49,7 @@ class UserController extends BaseController
         return $this->view()->assign('nodes', $nodes)->assign('user', $user)->assign('msg', $msg)->display('user/node.tpl');
     }
     
+    
     public function node2($request, $response, $args)
     {
         $msg = DbConfig::get('user-node');

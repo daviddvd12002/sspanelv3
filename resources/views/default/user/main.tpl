@@ -106,12 +106,14 @@
                         <i class="fa fa-sitemap"></i> <span>Node List</span>
                     </a>
                 </li>
-                
-                <li>
-                    <a href="/user/node2">
-                        <i class="fa fa-sitemap"></i> <span>Pro Node List</span>
-                    </a>
-                </li>
+
+                {if $user->plan == 'B'}
+                    <li>
+                        <a href="/user/node2">
+                            <i class="fa fa-sitemap"></i> <span>Pro Node List</span>
+                        </a>
+                    </li>
+                {/if}
                 
                 <li>
                     <a href="/user/trafficlog">

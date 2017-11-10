@@ -43,7 +43,11 @@
             <input type="text" id="code" value="{$code}" class="form-control" placeholder="Invitation code"/>
             <span class="glyphicon glyphicon-send form-control-feedback"></span>
         </div>
-
+        
+        <div class="form-group has-feedback">
+            <p>You can find invitation code <a href="/code">here</a>.</p>
+        </div>
+        
         <div class="form-group has-feedback">
             <p>You much agree <a href="/tos">TOS</a></p>
         </div>

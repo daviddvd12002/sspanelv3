@@ -5,8 +5,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Advanced Node List
-            <small>Advanced Node List</small>
+            Pro Node List
+            <small>Pro Node List</small>
         </h1>
     </section>
 

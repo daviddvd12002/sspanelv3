@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-
+        {if $user->plan == 'B'}
         {foreach $nodes as $node}
             <div class="row">
                 <div class="col-md-12">
@@ -96,6 +96,7 @@
 
 
         {/foreach}
+        {/if}
     </section>
     <!-- /.content -->
 </div><!-- /.content-wrapper -->

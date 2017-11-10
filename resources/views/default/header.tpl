@@ -13,8 +13,7 @@
 <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{$config["appName"]}</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="/">Home</a></li>
-            <li><a href="https://shadowsocks.org/en/download/clients.html">Downloads</a></li>
+
             <li><a href="/code">Invitation code</a></li>
             {if $user->isLogin}
                 <li><a href="/user">User center</a></li>

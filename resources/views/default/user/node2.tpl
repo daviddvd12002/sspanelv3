@@ -5,8 +5,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Node List
-            <small>Node2 List</small>
+            Advanced Node List
+            <small>Advanced Node List</small>
         </h1>
     </section>
 
@@ -16,9 +16,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
-                    <h4>Node List</h4>
-
-                    {$msg}
+                    <h4>Pro Nodes</h4>
+                    You need a subscription service to use Pro Nodes
                 </div>
             </div>
         </div>

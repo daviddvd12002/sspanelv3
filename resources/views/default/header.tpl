@@ -26,8 +26,7 @@
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="https://shadowsocks.org/en/download/clients.html">Downloads</a></li>
+
             <li><a href="/code">Invitation code</a></li>
             {if $user->isLogin}
                 <li><a href="/user">User center</a></li>

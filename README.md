@@ -84,3 +84,8 @@ view config guide on [wiki](https://github.com/orvice/ss-panel/wiki/v3-Config)
 在fastcgi.conf文件中，修改fastcgi_param PHP_ADMIN_VALUE "open_basedir=$document_root/:/tmp/:/proc/";，以test.com为例（此域名为添加vhost时输入的域名），修改内容如下：（这样做的坏处时每次添加vhost时都需要手动添加⊙﹏⊙）
 /usr/local/nginx/conf/fastcgi.conf
 fastcgi_param PHP_ADMIN_VALUE "open_basedir=/home/wwwroot/test.com/:/tmp/:/proc/";
+
+### 数据库
+node-> type=1 free node, type=2 pro node;
+user-> plan=A free user, plan=B pro user;
+

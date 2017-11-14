@@ -80,7 +80,7 @@ class UserController extends BaseController
 //        $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
 //        $ssqr = "ss://" . base64_encode($ssurl);
         $ssrurl_prefix = $ary['server'] . ":" . $ary['server_port'] . ":" . $ary['protocol'] . ":" . $ary['method'] . ":" . $ary['obfs'] . ":" . rtrim(strtr(base64_encode($ary['password']), '+/', '-_'), '=');
-        $ssrurl_suffix = '/?' . "obfsparam=" . rtrim(strtr(base64_encode($ary['obfsparam']), '+/', '-_'), '=') . "&protoparam=" . rtrim(strtr(base64_encode($ary['protocolparam'), '+/', '-_'), '=') . "&remarks=" . rtrim(strtr(base64_encode($node->name), '+/', '-_'), '=') . "&group=" . rtrim(strtr(base64_encode("GoodByeFW"), '+/', '-_'), '=');  
+        $ssrurl_suffix = '/?' . "obfsparam=" . rtrim(strtr(base64_encode($ary['obfsparam']), '+/', '-_'), '=') . "&protoparam=" . rtrim(strtr(base64_encode($ary['protocolparam']), '+/', '-_'), '=') . "&remarks=" . rtrim(strtr(base64_encode($node->name), '+/', '-_'), '=') ;  
         $ssqr = "ssr://" . rtrim(strtr(base64_encode($ssrurl_prefix . $ssrurl_suffix), '+/', '-_'), '=');
 
 

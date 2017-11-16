@@ -101,6 +101,24 @@ class XCat
             echo $e->getMessage();
             return false;
         }
+        
+        try {
+            User::where("plan", 'A')->update([
+                'transfer_enable' => 5368709120,
+            ]);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
+        }
+        
+        try {
+            User::where("plan", 'B')->update([
+                'transfer_enable' => 107374182400,
+            ]);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
+        }
         return "reset traffic successful";
     }
     

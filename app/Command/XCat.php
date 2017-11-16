@@ -108,7 +108,7 @@ class XCat
         try{
             User::where('expire_time','<',time())->update([
                 'plan' => 'A',
-                'transfer_enable' => 5368709120;
+                'transfer_enable' => 5368709120,
             ]);
         }catch (\Exception $e){
              echo $e->getMessage();

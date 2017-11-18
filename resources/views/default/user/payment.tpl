@@ -41,7 +41,7 @@
                     <div class="box-header">
                         <h3 class="box-title">Payment</h3>
                     </div>
-                    <form action="charge.php" method="post">
+                    <form action="/stripe/charge.php" method="post">
                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                        data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"
                        data-description="Access for a 3 months"

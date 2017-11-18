@@ -41,6 +41,13 @@
                     <div class="box-header">
                         <h3 class="box-title">Payment</h3>
                     </div>
+                    <form action="charge.php" method="post">
+                       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                       data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"
+                       data-description="Access for a 3 months"
+                       data-amount="999"
+                       data-locale="auto"></script>
+                    </form>
                     <!-- /.box-header -->
 
                 </div>
@@ -52,25 +59,5 @@
     <!-- /.content -->
 </div><!-- /.content-wrapper -->
 
-<script>
-    $(document).ready(function () {
-        $("#invite").click(function () {
-            $.ajax({
-                type: "POST",
-                url: "/user/invite",
-                dataType: "json",
-                data: {
-                    num: $("#num").val()
-                },
-                success: function (data) {
-                    window.location.reload();
-                },
-                error: function (jqXHR) {
-                    alert("ERROR：" + jqXHR.status);
-                }
-            })
-        })
-    })
-</script>
 
 {include file='user/footer.tpl'}

@@ -47,7 +47,7 @@
                             <option value="1899">$18.99/180days</option>
                             <option value="3799">$37.99/360days</option>
                             </select>
-                            ---
+
                             <form id="stripe" action="/payment/charge.php" method="post">
                             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"

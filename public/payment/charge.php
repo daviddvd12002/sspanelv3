@@ -20,6 +20,55 @@ if(!empty($_POST['stripeToken']))
                 echo $amount;
                 echo $userport;
         //      print_r($chargeJson);
+                try {
+		        $conn = new PDO("mysql:host=$pay_host; dbname=$pay_name", $pay_username, $pay_password);
+			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+			//记录订单
+			$sql = "INSERT INTO orders (total_fee, trade_no, out_order_no, port) VALUES(?,?,?,?)";
+			$stmt = $conn->prepare($sql);
+			$stmt->bindParam(1, $price);
+			$stmt->bindParam(2, $trade_no);
+			$stmt->bindParam(3, $out_trade_no);
+			$stmt->bindParam(4, $port);
+			$stmt->execute();						    
+
+			//读取用户信息
+			foreach ($stmt as $row) {
+				$expire_time=$row['expire_time'];
+				$transfer_enable = $row['transfer_enable'];
+			}
+			//计算时间增值
+			switch ($amount){
+				case 999:
+  				$moretime = 90;
+  				break;
+				case 1899:
+ 				$moretime = 180;
+  				break;
+				case 3799:
+				$moretime = 360;
+				break;		
+				default:
+  				exit ("fail");
+			}
+				
+			if ($expire_time >time()) {$expire_time = $expire_time+$moretime*86400;}
+			else {$expire_time = time()+$moretime*86400;}
+					 
+			//增加时间
+			$sql= "UPDATE user SET expire_time=:expire_time, enable=1 WHERE port=:port";
+			$stmt = $conn->prepare($sql);
+			$stmt->bindParam(':port', $port);
+			$stmt->bindParam(':expire_time', $expire_time);
+			$done = $stmt->execute();
+			if ($done){echo 'success';}
+                }
+		catch (PDOException $e) {
+			echo $e->getMessage();
+		}
+		$conn = null;
+			
         }
         else
         {

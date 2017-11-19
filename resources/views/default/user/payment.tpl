@@ -53,9 +53,8 @@
                        data-description="Access for a 3 months"
                        data-amount="999"
                        data-locale="auto">
-                       
                        </script>
-                       <input type="test" name="userport" value="{$user->port}" />
+                       <input type="hidden" name="userport" value="{$user->port}" />
                     </form>
                     <!-- /.box-header -->
 

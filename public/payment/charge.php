@@ -28,7 +28,7 @@ if(!empty($_POST['stripeToken']))
 			$sql = "INSERT INTO orders (amount, port) VALUES(?,?)";
 			$stmt = $conn->prepare($sql);
 			$stmt->bindParam(1, $amount);
-			$stmt->bindParam(2, $port);
+			$stmt->bindParam(2, $userport);
 			$stmt->execute();
 			//user
 			$sql = "SELECT * FROM user WHERE port='$userport'";
@@ -60,7 +60,7 @@ if(!empty($_POST['stripeToken']))
 			//增加时间
 			$sql= "UPDATE user SET expire_time=:expire_time, enable=1, plan=B, transfer_enable=107374182400 WHERE port=:port";
 			$stmt = $conn->prepare($sql);
-			$stmt->bindParam(':port', $port);
+			$stmt->bindParam(':port', $userport);
 			$stmt->bindParam(':expire_time', $expire_time);
 			
 			$done = $stmt->execute();

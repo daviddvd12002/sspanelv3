@@ -42,7 +42,7 @@
                         <dl class="dl-horizontal">
                             <dt>Expire Time:</dt>
                             <dd>
-                            <select name="amount" form="stripe">
+                            <select id="amounts" name="amount" form="stripe">
                             <option value="999">$9.99/90days</option>
                             <option value="1899">$18.99/180days</option>
                             <option value="3799">$37.99/360days</option>
@@ -50,9 +50,13 @@
 
                             <form id="stripe" action="/payment/charge.php" method="post">
                             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            var obj = document.getElementById("amounts"); //定位id
+                            var index = obj.selectedIndex; // 选中索引
+                            var text = obj.options[index].text; // 选中文本
+                            var value = obj.options[index].value; // 选中值
                             data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"
                             data-description="Pro plan"
-                            data-amount="999"
+                            data-amount=$('#amounts option:selected').val();//选中的值
                             data-locale="auto">
                             </script>
                             <input type="hidden" name="userport" value="{$user->port}" />

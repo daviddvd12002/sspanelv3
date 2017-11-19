@@ -89,3 +89,17 @@ fastcgi_param PHP_ADMIN_VALUE "open_basedir=/home/wwwroot/test.com/:/tmp/:/proc/
 node-> type=1 free node, type=2 pro node;
 user-> plan=A free user, plan=B pro user;
 
+# stripe
+stripe for pay
+## Composer
+
+You can install the bindings via [Composer](http://getcomposer.org/). Run the following command:
+
+```bash
+composer require stripe/stripe-php
+```
+
+To use the bindings, use Composer's [autoload](https://getcomposer.org/doc/00-intro.md#autoloading):
+
+```php
+require_once('vendor/autoload.php');

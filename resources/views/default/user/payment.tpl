@@ -38,6 +38,13 @@
 
                     </div>
                     <!-- /.box -->
+                    <div class="box-body">
+                        <dl class="dl-horizontal">
+                            <dt>Expire Time:</dt>
+                            <dd>{date("Y-m-d H:i:s", $user->expire_time)}</dd>
+
+                        </dl>
+                    </div>
                     <div class="box-header">
                         <h3 class="box-title">Payment</h3>
                         <select name="amount" form="stripe">

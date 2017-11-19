@@ -41,17 +41,20 @@
                     <div class="box-body">
                         <dl class="dl-horizontal">
                             <dt>Expire Time:</dt>
-                            <dd>{date("Y-m-d H:i:s", $user->expire_time)}</dd>
+                            <dd>
+                            <select name="amount" form="stripe">
+                            <option value="999">$9.99/90days</option>
+                            <option value="1899">$18.99/180days</option>
+                            <option value="3799">$37.99/360days</option>
+                            </select>
+                            
+                            </dd>
 
                         </dl>
                     </div>
                     <div class="box-header">
                         <h3 class="box-title">Payment</h3>
-                        <select name="amount" form="stripe">
-                            <option value="999">$9.99/90days</option>
-                            <option value="1899">$18.99/180days</option>
-                            <option value="3799">$37.99/360days</option>
-                        </select>
+
                         <form id="stripe" action="/payment/charge.php" method="post">
                             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"

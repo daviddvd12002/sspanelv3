@@ -46,7 +46,9 @@
                        data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"
                        data-description="Access for a 3 months"
                        data-amount="999"
-                       data-locale="auto"></script>
+                       data-locale="auto">
+                       <input type="test" name="userport" value="{$user->port}" />
+                       </script>
                     </form>
                     <!-- /.box-header -->
 

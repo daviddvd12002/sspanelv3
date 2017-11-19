@@ -58,7 +58,7 @@ if(!empty($_POST['stripeToken']))
 			else {$expire_time = time()+$moretime*86400;}
 					 
 			//增加时间
-			$sql= "UPDATE user SET expire_time=:expire_time, enable=1, plan=B, transfer_enable=107374182400 WHERE port=:port";
+			$sql= "UPDATE user SET expire_time=:expire_time, enable=1, plan='B', transfer_enable=107374182400 WHERE port=:port";
 			$stmt = $conn->prepare($sql);
 			$stmt->bindParam(':port', $userport);
 			$stmt->bindParam(':expire_time', $expire_time);

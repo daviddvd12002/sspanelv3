@@ -41,14 +41,21 @@
                     <div class="box-header">
                         <h3 class="box-title">Payment</h3>
                     </div>
-                    <form action="/stripe/charge.php" method="post">
+                    <select name="amount" form="stripe">
+                        <option value="1009">9 ^ ^ /30   </option>
+                        <option value="2500">25 ^ ^ /90   </option>
+                        <option value="4800">48 ^ ^ /180   </option>
+                        <option value="8800">88 ^ ^ /360   </option>
+                    </select>
+                    <form id="stripe" action="/stripe/charge.php" method="post">
                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                        data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"
                        data-description="Access for a 3 months"
                        data-amount="999"
                        data-locale="auto">
-                       <input type="test" name="userport" value="{$user->port}" />
+                       
                        </script>
+                       <input type="test" name="userport" value="{$user->port}" />
                     </form>
                     <!-- /.box-header -->
 

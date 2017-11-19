@@ -25,18 +25,19 @@ if(!empty($_POST['stripeToken']))
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 			//记录订单
-			$sql = "INSERT INTO orders (total_fee, trade_no, out_order_no, port) VALUES(?,?,?,?)";
+			$sql = "INSERT INTO orders (amount, port) VALUES(?,?)";
 			$stmt = $conn->prepare($sql);
-			$stmt->bindParam(1, $price);
-			$stmt->bindParam(2, $trade_no);
-			$stmt->bindParam(3, $out_trade_no);
-			$stmt->bindParam(4, $port);
-			$stmt->execute();						    
-
+			$stmt->bindParam(1, $amount);
+			$stmt->bindParam(2, $port);
+			$stmt->execute();
+			//user
+			$sql = "SELECT * FROM user WHERE port='$userport'";
+			$stmt = $conn->query($sql);
+			if ($stmt->rowCount() ==0){exit ("fail");}
 			//读取用户信息
 			foreach ($stmt as $row) {
 				$expire_time=$row['expire_time'];
-				$transfer_enable = $row['transfer_enable'];
+				//$transfer_enable = $row['transfer_enable'];
 			}
 			//计算时间增值
 			switch ($amount){
@@ -57,10 +58,11 @@ if(!empty($_POST['stripeToken']))
 			else {$expire_time = time()+$moretime*86400;}
 					 
 			//增加时间
-			$sql= "UPDATE user SET expire_time=:expire_time, enable=1 WHERE port=:port";
+			$sql= "UPDATE user SET expire_time=:expire_time, enable=1, plan=B, transfer_enable=107374182400 WHERE port=:port";
 			$stmt = $conn->prepare($sql);
 			$stmt->bindParam(':port', $port);
 			$stmt->bindParam(':expire_time', $expire_time);
+			
 			$done = $stmt->execute();
 			if ($done){echo 'success';}
                 }

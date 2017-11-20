@@ -119,6 +119,19 @@
 			    {else}
 				  <dd>{number_format(($user->expire_time - time())/86400 ,1)}Day(s)</dd>
 			    {/if}
+			    <dt>Upgrade to Pro plan:</dt>
+                            <dd>
+			    <form id="stripe" action="/payment/charge.php" method="post">
+				<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+				data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"
+				data-description="3 Months Pro Plan"
+				data-amount="999"
+				data-locale="auto">
+				</script>
+				<input type="hidden" name="userport" value="{$user->port}" />
+				</form>
+			    
+			     </dd>
                         </dl>
                     </div>
              

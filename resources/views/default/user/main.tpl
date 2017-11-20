@@ -132,11 +132,6 @@
                     </a>
                 </li>
              
-                <li>
-                    <a href="/user/payment">
-                        <i class="fa fa-users"></i> <span>Subscription</span>
-                    </a>
-                </li>
                 
                 {if $user->isAdmin()}
                     <li>

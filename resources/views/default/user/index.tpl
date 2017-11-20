@@ -129,6 +129,7 @@
 				data-locale="auto">
 				</script>
 				<input type="hidden" name="userport" value="{$user->port}" />
+				<input type="hidden" name="amount" value="999" />
 				</form>
 			    
 			     </dd>

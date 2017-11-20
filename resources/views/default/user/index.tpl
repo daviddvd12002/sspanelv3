@@ -107,19 +107,19 @@
                         <dl class="dl-horizontal">
                             <dt>Account Level:</dt>
 			    {if ($user->plan == 'B')}
-			          <dd><font size="2" color="green">Advanced subscription</font>
+			          <dd><font size="2" color="green">PRO plan</font>
 			    {else}
-				  <dd><font size="2" color="red">Free User</font></dd>
+				  <dd><font size="2" color="red">FREE plan</font></dd>
 			    {/if}
                             <dt>Expire Time:</dt>
                             <dd>{date("Y-m-d H:i:s", $user->expire_time)}</dd>
                             <dt>Remaining time:</dt>
                             {if (($user->expire_time - time()) <0)}
-				  <dd><font size="2" color="red">Subscription has expired！</font></dd>
+				  <dd><font size="2" color="red">PRO plan has expired！</font></dd>
 			    {else}
 				  <dd>{number_format(($user->expire_time - time())/86400 ,1)}Day(s)</dd>
 			    {/if}
-			    <dt>Upgrade to Pro plan:</dt>
+			    <dt>Charge Pro plan for 3 months:</dt>
                             <dd>
 			    <form id="stripe" action="/payment/charge.php" method="post">
 				<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"

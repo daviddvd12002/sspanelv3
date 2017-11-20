@@ -1,5 +1,6 @@
 <?php
 require_once('config.php');
+$p_msg = "ERROR";
 if(!empty($_POST['stripeToken']))
 {
         $stripetoken = $_POST['stripeToken'];
@@ -16,10 +17,8 @@ if(!empty($_POST['stripeToken']))
         $chargeJson = json_decode($charge);
         if($chargeJson['amount_refunded'] == 0) 
         {
-                echo "Transaction completed successfully";
-                echo $amount;
-                echo $userport;
-        //      print_r($chargeJson);
+                $p_msg = "Transaction completed successfully";
+
                 try {
 		        $conn = new PDO("mysql:host=$pay_host; dbname=$pay_name", $pay_username, $pay_password);
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -64,7 +63,7 @@ if(!empty($_POST['stripeToken']))
 			$stmt->bindParam(':expire_time', $expire_time);
 			
 			$done = $stmt->execute();
-			if ($done){echo 'success';}
+			if ($done){$p_msg = "Transaction completed successfully";}
                 }
 		catch (PDOException $e) {
 			echo $e->getMessage();
@@ -74,7 +73,7 @@ if(!empty($_POST['stripeToken']))
         }
         else
         {
-                echo "Transaction has been failed";
+                $p_msg = "Transaction has been failed";
         }
 }
 else
@@ -82,3 +81,41 @@ else
         echo "Transaction has been failed Token Emp";
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Success</title>
+<style type="text/css">
+*{padding:0;margin:0}
+body{background:#FFF}
+#mydeCms{max-width:560px;margin:50px auto;border:1px solid #D6DFE6;background:#F9F9F9;border-radius:10px;-moz-box-shadow:4px 4px 12px -2px rgba(88,103,125,.5);-webkit-box-shadow:4px 4px 12px -2px rgba(88,103,125,.5);box-shadow:4px 4px 12px -2px rgba(88,103,125,.5)}
+#mydeCms h1{font-size:18px;text-indent:20px;line-height:45px;border-bottom:1px solid #D6DFE6;color:#555;position:relative;letter-spacing:2px}
+#mydeCms h1 span{font-size:13px;font-style:normal;position:absolute;top:0;right:10px;font-weight:400}
+#mydeCms h1 span em{font-size:14px;color:red;font-style:normal;font-weight:400}
+#msg{background:#FFF}
+#msg table{min-height:100px}
+#msg td{padding:8px;line-height:35px;font-size:18px;color:#666}
+#msgcontent{padding:5px;border-radius:3px;color:green;letter-spacing:2px}
+#copyRight{height:35px;overflow:hidden;line-height:35px;border-top:1px solid #D6DFE6;font-size:12px;color:#666;text-align:center}
+#copyRight a{text-decoration:none;color:#666}
+#btn{ background:#FFF;}
+#btn a{ display:block; text-align:center; width:135px; background:#28B5D6;border-radius:3px; color:#FFF; text-decoration:none; line-height:35px;}
+#btn a:hover{background:#20A3C5;}
+</style>
+</head>
+<body>
+<div id="mydeCms">
+  <h1><?php echo $p_msg; ?></h1>
+  <div id="msg">
+    <table width="100%" border="0" cellpadding="0" cellspacing="1">
+      <tr>
+        <td valign="middle"><div id="msgcontent"><?php echo $p_msg; ?></div><div id="btn"><table border="0" cellpadding="5" cellspacing="5" align="center" style="margin:0px auto;"><tr><td valign="middle"><a href="/user">Return</a></td></tr></table></div></td>
+      </tr>
+    </table>
+  </div>
+  <div id="copyRight">Copyright &copy; <a href="https://www.goodbyefw.com" target="_blank">GoodByeFw</a> All rights reserved. </div>
+</div>
+</body>
+</html>

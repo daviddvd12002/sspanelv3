@@ -112,26 +112,26 @@
                             <i class="fa fa-sitemap"></i> <span>Pro Nodes</span>
                         </a>
                     </li>
-                
+<!--                
                 <li>
                     <a href="/user/trafficlog">
                         <i class="fa fa-history"></i> <span>Traffic Log</span>
                     </a>
                 </li>
-
+-->
 
                 <li>
                     <a href="/user/edit">
                         <i class="fa  fa-pencil"></i> <span>Profile Edit</span>
                     </a>
                 </li>
-
+<!--
                 <li>
                     <a href="/user/invite">
                         <i class="fa fa-users"></i> <span>Invite</span>
                     </a>
                 </li>
-             
+-->             
                 
                 {if $user->isAdmin()}
                     <li>

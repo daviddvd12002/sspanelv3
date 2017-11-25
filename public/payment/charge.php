@@ -107,7 +107,7 @@ body{background:#FFF}
 </head>
 <body>
 <div id="mydeCms">
-  <h1><?php echo $p_msg; ?></h1>
+  <h1>Message</h1>
   <div id="msg">
     <table width="100%" border="0" cellpadding="0" cellspacing="1">
       <tr>

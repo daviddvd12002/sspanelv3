@@ -97,7 +97,7 @@ body{background:#FFF}
 #msg{background:#FFF}
 #msg table{min-height:100px}
 #msg td{padding:8px;line-height:35px;font-size:18px;color:#666}
-#msgcontent{padding:5px;border-radius:3px;color:green;letter-spacing:2px}
+#msgcontent{padding:5px;border-radius:3px;color:red;letter-spacing:2px}
 #copyRight{height:35px;overflow:hidden;line-height:35px;border-top:1px solid #D6DFE6;font-size:12px;color:#666;text-align:center}
 #copyRight a{text-decoration:none;color:#666}
 #btn{ background:#FFF;}

@@ -13,6 +13,7 @@
     <!-- Main content -->
     <section class="content">
         <!-- START PROGRESS BARS -->
+  {if $user->plan == 'A'}    
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
@@ -21,6 +22,7 @@
                 </div>
             </div>
         </div>
+  {/if}      
         {if $user->plan == 'B'}
         {foreach $nodes as $node}
             <div class="row">

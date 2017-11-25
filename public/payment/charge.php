@@ -17,7 +17,7 @@ if(!empty($_POST['stripeToken']))
         $chargeJson = json_decode($charge);
         if($chargeJson['amount_refunded'] == 0) 
         {
-                $p_msg = "Transaction completed successfully";
+                $p_msg = "Checking payment";
 
                 try {
 		        $conn = new PDO("mysql:host=$pay_host; dbname=$pay_name", $pay_username, $pay_password);
@@ -78,7 +78,7 @@ if(!empty($_POST['stripeToken']))
 }
 else
 {
-        echo "Transaction has been failed Token Emp";
+        $p_msg = "Transaction has been failed Token Emp";
 }
 ?>
 

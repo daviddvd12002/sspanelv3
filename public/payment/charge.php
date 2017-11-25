@@ -86,7 +86,7 @@ else
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Success</title>
+<title>Message</title>
 <style type="text/css">
 *{padding:0;margin:0}
 body{background:#FFF}

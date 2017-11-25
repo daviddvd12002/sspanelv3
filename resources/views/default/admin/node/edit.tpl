@@ -120,10 +120,10 @@
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="type" class="col-sm-3 control-label">type</label>
+                                        <label for="plan" class="col-sm-3 control-label">plan</label>
 
                                         <div class="col-sm-9">
-                                            <input class="form-control" id="type" value="{$node->type}">
+                                            <input class="form-control" id="plan" value="{$node->plan}">
                                         </div>
                                     </div>
                                     
@@ -176,7 +176,8 @@
                     info: $("#info").val(),
                     type: $("#type").val(),
                     status: $("#status").val(),
-                    sort: $("#sort").val()
+                    sort: $("#sort").val(),
+                    plan: $("#plan").val()
                 },
                 success: function (data) {
                     if (data.ret) {

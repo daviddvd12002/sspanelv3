@@ -37,10 +37,12 @@
                                     <div class="product-info">
                                         <a href="./node/{$node->id}" class="product-title">{$node->name} <span
                                                     class="label label-info pull-right">{$node->status}</span></a>
+                                        {if $user->isAdmin()}
                                         <span class=" badge bg-red">[Ratio:&nbsp;{$node->traffic_rate}]</span>
                                         <span class=" badge bg-green">[online users:&nbsp;{$node->getOnlineUserCount()}]</span>
                                         <span class=" badge bg-blue">[Uptime:&nbsp;{$node->getNodeUptime()}]</span>
                                         <span class=" badge bg-yellow">[Loading:&nbsp;{$node->getNodeLoad()}]</span>
+                                        {/if}
                                         <p>
                                             {$node->info}
                                         </p>

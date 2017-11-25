@@ -137,9 +137,7 @@
 			   
                         </dl>
                     </div>
-             	    <div align="center">
-                        We use Stripe to process credit card payments on our website.
-                    </div>
+
                     <!-- /.box-body -->
                 </div>
                 <!-- /.box -->

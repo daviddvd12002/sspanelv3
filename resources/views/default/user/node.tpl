@@ -13,6 +13,7 @@
     <!-- Main content -->
     <section class="content">
         <!-- START PROGRESS BARS -->
+ <!--       
         <div class="row">
             <div class="col-md-12">
                 <div class="callout callout-warning">
@@ -22,7 +23,7 @@
                 </div>
             </div>
         </div>
-
+-->
         {foreach $nodes as $node}
             <div class="row">
                 <div class="col-md-12">

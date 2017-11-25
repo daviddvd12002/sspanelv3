@@ -131,12 +131,11 @@
 				</script>
 				<input type="hidden" name="userport" value="{$user->port}" />
 				<input type="hidden" name="amount" value="999" />
-				</form>
+			     </form>
 			    
 			     </dd>
 			   
                         </dl>
-			<dl class="dl-horizontal"><dt>We use Stripe to process credit card payments on our website. </dt></dl>
                     </div>
              
                     <!-- /.box-body -->

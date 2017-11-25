@@ -118,7 +118,15 @@
                                             <input class="form-control" id="status" value="{$node->status}">
                                         </div>
                                     </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="type" class="col-sm-3 control-label">type</label>
 
+                                        <div class="col-sm-9">
+                                            <input class="form-control" id="type" value="{$node->type}">
+                                        </div>
+                                    </div>
+                                    
                                     <div class="form-group">
                                         <label for="sort" class="col-sm-3 control-label">排序</label>
 

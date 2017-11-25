@@ -45,7 +45,7 @@ class UserController extends BaseController
     {
         $msg = DbConfig::get('user-node');
         $user = Auth::getUser();
-        $nodes = Node::where('type', 1)->orderBy('sort')->get();
+        $nodes = Node::where('plan', 'A')->orderBy('sort')->get();
         return $this->view()->assign('nodes', $nodes)->assign('user', $user)->assign('msg', $msg)->display('user/node.tpl');
     }
     
@@ -54,7 +54,7 @@ class UserController extends BaseController
     {
         $msg = DbConfig::get('user-node');
         $user = Auth::getUser();
-        $nodes = Node::where('type', 2)->orderBy('sort')->get();
+        $nodes = Node::where('plan', 'B')->orderBy('sort')->get();
         return $this->view()->assign('nodes', $nodes)->assign('user', $user)->assign('msg', $msg)->display('user/node2.tpl');
     }
 

@@ -120,7 +120,7 @@
 				  <dd>{number_format(($user->expire_time - time())/86400 ,1)}Day(s)</dd>
 			    {/if}
 			    <dt></dt><dd>&nbsp;</dd>
-			    <dt>Recharge 3 months </br> for PRO plan:</dt>
+			    <dt>Pro plan: $9.99/3months:</dt>
                             <dd>
 			    <form id="stripe" action="/payment/charge.php" method="post">
 				<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"

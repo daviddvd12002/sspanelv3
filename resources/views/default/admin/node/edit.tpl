@@ -127,13 +127,6 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group">
-                                        <label for="type" class="col-sm-3 control-label">Type</label>
-
-                                        <div class="col-sm-9">
-                                            <input class="form-control" id="type" type="number" value="{$node->type}">
-                                        </div>
-                                    </div>
                                     
                                     <div class="form-group">
                                         <label for="info" class="col-sm-3 control-label">节点描述</label>

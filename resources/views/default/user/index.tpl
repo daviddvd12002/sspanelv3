@@ -134,6 +134,7 @@
 				</form>
 			    
 			     </dd>
+			   <dt>We use Stripe to process credit card payments on our website. </dt>
                         </dl>
                     </div>
              

@@ -31,6 +31,7 @@ class NodeController extends AdminController
         $node->type = $request->getParam('type');
         $node->status = $request->getParam('status');
         $node->sort = $request->getParam('sort');
+        $node->plan = $request->getParam('plan');
         if (!$node->save()) {
             $rs['ret'] = 0;
             $rs['msg'] = "Fail";
@@ -66,6 +67,7 @@ class NodeController extends AdminController
         $node->type = $request->getParam('type');
         $node->status = $request->getParam('status');
         $node->sort = $request->getParam('sort');
+        $node->plan = $request->getParam('plan');
         if (!$node->save()) {
             $rs['ret'] = 0;
             $rs['msg'] = "fail to edit";

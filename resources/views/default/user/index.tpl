@@ -132,7 +132,7 @@
 				<input type="hidden" name="userport" value="{$user->port}" />
 				<input type="hidden" name="amount" value="999" />
 			     </form>
-			    
+			    We use Stripe to process credit card payments on our website.
 			     </dd>
 			   
                         </dl>

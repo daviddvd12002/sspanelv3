@@ -124,6 +124,18 @@
                                             <input class="form-control" id="sort" type="number" value="">
                                         </div>
                                     </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="plan" class="col-sm-3 control-label">Plan</label>
+
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="plan">
+                                                <option value="A" selected="selected">Free-Node,A</option>
+                                                <option value="B">Pro-Node,B</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
                                     <div class="form-group">
                                         <label for="info" class="col-sm-3 control-label">节点描述</label>
 
@@ -165,7 +177,9 @@
                     info: $("#info").val(),
                     type: $("#type").val(),
                     status: $("#status").val(),
-                    sort: $("#sort").val()
+                    sort: $("#sort").val(),
+                    plan: $("#plan").val()
+                    
                 },
                 success: function (data) {
                     if (data.ret) {

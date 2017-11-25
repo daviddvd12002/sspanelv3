@@ -136,7 +136,7 @@
 			     </dd>
 			   
                         </dl>
-			<dl class="dl-horizontal">We use Stripe to process credit card payments on our website. </dl>
+			<dl class="dl-horizontal"><dt>We use Stripe to process credit card payments on our website. </dt></dl>
                     </div>
              
                     <!-- /.box-body -->

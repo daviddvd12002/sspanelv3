@@ -119,19 +119,25 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group">
-                                        <label for="plan" class="col-sm-3 control-label">plan</label>
-
-                                        <div class="col-sm-9">
-                                            <input class="form-control" id="plan" value="{$node->plan}">
-                                        </div>
-                                    </div>
                                     
                                     <div class="form-group">
                                         <label for="sort" class="col-sm-3 control-label">排序</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="sort" type="number" value="{$node->sort}">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="plan" class="col-sm-3 control-label">Plan</label>
+
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="plan">
+                                                <option value="A" {if $node->plan=='A'}selected="selected"{/if}>Plan A
+                                                </option>
+                                                <option value="B" {if $node->plan=='B'}selected="selected"{/if}>Plan B
+                                                </option>
+                                            </select>
                                         </div>
                                     </div>
                                     

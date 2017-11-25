@@ -137,8 +137,8 @@
 			   
                         </dl>
                     </div>
-             	    <div class="box-body">
-                        WE fsdf s sdf sadf sa fsd f
+             	    <div align="center">
+                        We use Stripe to process credit card payments on our website.
                     </div>
                     <!-- /.box-body -->
                 </div>

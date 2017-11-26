@@ -124,7 +124,7 @@
                             <dd>
 			    <form id="stripe" action="/payment/charge.php" method="post">
 				<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-				data-key="pk_test_Ce0Y0HfJkmbBy58RPWxxujhj"
+				data-key="pk_live_TvOdao71dkPsjYPk3wsfApzY"
 				data-description="3 Months Pro Plan"
 				data-amount="999"
 				data-locale="auto">

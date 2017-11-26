@@ -112,7 +112,7 @@
 				  <dd><font size="2" color="red">FREE plan</font></dd>
 			    {/if}
                             <dt>Expire Time:</dt>
-                            <dd>{date("Y-m-d H:i:s", $user->expire_time)}</dd>
+                            <dd>{date("Y-m-d", $user->expire_time)}</dd>
                             <dt>Remaining time:</dt>
                             {if (($user->expire_time - time()) <0)}
 				  <dd><font size="2" color="red">PRO plan has expired！</font></dd>

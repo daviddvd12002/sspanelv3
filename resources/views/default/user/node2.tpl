@@ -18,7 +18,7 @@
             <div class="col-md-12">
                 <div class="callout callout-warning">
                     <h4>Pro Nodes</h4>
-                    You need a subscription service to use Pro Nodes
+                    You need upgrade to Pro-Plan to use Pro Nodes
                 </div>
             </div>
         </div>

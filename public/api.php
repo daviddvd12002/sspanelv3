@@ -21,7 +21,7 @@ if($login_code['flag']=="1") {//验证状态重写了
     $server_config = mysqli_fetch_array(mysqli_query($con, $sql));
     $ssrurl_prefix = $server_config['server'] . ":" . $userport . ":" . "origin" . ":" . "aes-128-cfb" . ":" . "plain" . ":" . rtrim(strtr(base64_encode($password), '+/', '-_'), '=');
     $ssrurl_suffix = '/?' . "obfsparam=" . rtrim(strtr(base64_encode("bing.com"), '+/', '-_'), '=') . "&protoparam=" . rtrim(strtr(base64_encode(""), '+/', '-_'), '=') . "&remarks=" . rtrim(strtr(base64_encode($server_config['name']), '+/', '-_'), '=') . "&group=" . rtrim(strtr(base64_encode("AW"), '+/', '-_'), '=') ;  
-    $ssqr = "ssr://" . rtrim(strtr(base64_encode($ssrurl_prefix . $ssrurl_suffix), '+/', '-_'), '=');
+    $ssqr = "ssr://" . rtrim(strtr(base64_encode($ssrurl_prefix . $ssrurl_suffix), '+/', '-_'), '=') . "\r\n";
     return $ssqr;
     }
 

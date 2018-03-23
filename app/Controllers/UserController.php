@@ -68,12 +68,12 @@ class UserController extends BaseController
         }
         $ary['server'] = $node->server;
         $ary['server_port'] = "443";
-        $ary['password'] = "pubpassword";
-        $ary['method'] = $node->method;
-        $ary['protocol'] = $this->user->protocol;
+        $ary['password'] = "pubpwd";
+        $ary['method'] = "aes-128-ctr";
+        $ary['protocol'] = "auth_aes128_md5";
         $ary['protocolparam'] = $this->user->port . ":" . $this->user->passwd;
-        $ary['obfs'] = $this->user->obfs;
-        $ary['obfsparam'] = "bing.com";
+        $ary['obfs'] = "tls1.2_ticket_auth";
+        $ary['obfsparam'] = "cloudflare.com";
         $json = json_encode($ary);
         $json_show = json_encode($ary, JSON_PRETTY_PRINT);
 
